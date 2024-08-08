@@ -1,13 +1,16 @@
 
 import { useGLTF, useTexture, Decal } from '@react-three/drei'
+import { MeshStandardMaterial } from 'three'
 
 export function Ak() {
     const { nodes } = useGLTF('resources/models/ak47.glb')
-    //console.log(nodes.ak47)
+    console.log(nodes.ak47)
     const texture = useTexture('resources/decals/melt.png')
     //const tex1 = '/resources/textures/borbon.png'
     return (
-        <mesh geometry={nodes.ak47.geometry} material={nodes.ak47.material} >
+        // <mesh geometry={nodes.ak47.geometry} material={nodes.ak47.material} metalness={0} >
+        <mesh geometry={nodes.ak47.geometry} >
+            <meshStandardMaterial map={nodes.ak47.material.map} metalness={.1} />
             <Decal
                 //debug // Makes "bounding box" of the decal visible
                 position={[0.65, -.5, -14]} // Position of the decal
@@ -18,6 +21,6 @@ export function Ak() {
 
                 </meshStandardMaterial>
             </Decal>
-        </mesh>
+        </mesh >
     )
 }

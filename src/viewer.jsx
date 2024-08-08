@@ -26,9 +26,9 @@ export const Viewer = () => {
         intensity={Math.PI / 1.12}
       />
       <directionalLight
-        position={[3.3, 1.0, 4.4]}
+        position={[6.3, 1, 4.4]}
         castShadow={false}
-        intensity={Math.PI * 1.2}
+        intensity={Math.PI * .9}
       />
       <directionalLight
         position={[2.3, 1.0, -4.4]}
@@ -57,7 +57,7 @@ export const Viewer = () => {
         />
         <BrightnessContrast
           brightness={0.05}
-          contrast={0.2}
+          contrast={0.4}
         />
       </EffectComposer>
     </Canvas >
