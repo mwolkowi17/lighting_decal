@@ -22,12 +22,12 @@ export const Viewer = () => {
       }}
     >
       <ambientLight
-        intensity={Math.PI * 1.12}
+        intensity={Math.PI * 2.5}
       />
       <directionalLight
         position={[3.3, 1.0, 4.4]}
         castShadow
-        intensity={Math.PI / 2}
+        intensity={Math.PI / 2.2}
       />
       {/* <directionalLight
         position={[2.3, 1.0, -4.4]}
@@ -37,7 +37,7 @@ export const Viewer = () => {
       <directionalLight
         position={[-4.3, 1.0, 4.4]}
         castShadow
-        intensity={Math.PI / 3}
+        intensity={Math.PI / 3.3}
       />
       <Ak />
       <Block />
